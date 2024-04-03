@@ -9,7 +9,7 @@ header {
 	background-position: right bottom;
 	border-bottom: 1px solid darkslategray;
 	
-	padding: 10px 0;
+	padding-top: 10px;
 	position: fixed;
 	display: block;
 	left: 0;
@@ -27,8 +27,8 @@ header {
  	user-select: none; /* Standard syntax */
 }
 
-@media (min-width: 400px) {
-	header {height: 200px;}
+@media (min-width: 400px /*antes 400px */) {
+	header {height: 200px; /*2024 200px*/  }
 }
 
 header a {color: white;}
@@ -54,11 +54,11 @@ header a {color: white;}
 	/*agregadas por ti el 14nov*/
 	position: relative;
 	height: auto;	/*borralo*/
-	width: 100%;
-	margin-top: 10px;
+	width: 99%;
+	margin-top: 0px;/*era 10*/
 	padding-top: 0em;
 	padding-left: 10%;
-	background-color: slateblue; /*rgba(255,102,102,.8);*/
+	background-color: indianred;/*slateblue*/ /*rgba(255,102,102,.8);*/
 	border-radius: 0 0 18px 18px;
 	font-family: Open Sans, "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	-webkit-transition: all .7s;
@@ -68,11 +68,13 @@ header a {color: white;}
 .mininavegador ul {
 	/*margin: 0; 
 	padding: 0;*/
-	margin-bottom: 30px;
-	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
 	list-style: none;
 	display: block;
-	width: 100%; /*era 80*/
+	width: auto; /*era 80*/
+	border: 1px dotted white;
 }
 .mininavegador ul.mostrar {
 	display: block;
@@ -98,15 +100,15 @@ header a {color: white;}
 }
 .mininavegador ul li ol {
 	display: block;
-	border-left: 1px solid ghostwhite;
+	border-left: 1px solid gold;
 	color: ghostwhite;
-	font-size: 1em;
+	font-size: .9em;
 	position: relative;
 	padding-left: 1.5em;
 }
 .mininavegador ul li ol li {
 	background-color: transparent;
-	margin-bottom: .5em;
+	margin-bottom: .2em;
 }
 .mininavegador ul li ol li > a {
 	display: block;
@@ -169,11 +171,13 @@ span.equis:after {
 header img.img-full {
 	display: block;
 	float: left;
+	border: 1px dashed orange;
 }
 header img.img-mobile {
 	display: none;
 	float: left;
 	height: 50px;
+	border: 1px dotted gold;
 }
 
 
@@ -211,7 +215,7 @@ header img.img-mobile {
 		padding-top: 1em;
 		padding-left: .5em;
 		padding-right: .5em;
-
+		width: 99%;
 		border-radius: 0 0 10px 10px;
 		font-weight: normal;
 		font-size: .9em;
@@ -247,7 +251,10 @@ header img.img-mobile {
 
 @media (max-width: 400px) {
 	header {
-		height: 170px;
+		height: 100px;
+	}
+	div.contenedor {
+		margin-top: 100px;
 	}
 }
 

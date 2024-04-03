@@ -37,8 +37,10 @@ div.contenedor {
 	margin-top: 200px; /*era 200*/
 	margin-left: auto;
 	margin-right: auto;
-	background-color: mistyrose; /*mistyrose*/
+	background-color: grey; /*mistyrose*/
 	width: 100%;
+	
+	border-top: 2px solid black;
 }
 div.contenedor_sinheader {
 	position: relative;
@@ -281,9 +283,9 @@ video {
 		display: block;
 		opacity: .8;
 	}
-	div.contenedor {
+	/*div.contenedor {
 		margin-top: 200px;
-	}
+	}*/
 }
 
 @media (min-width: 800px) {
