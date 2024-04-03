@@ -39,44 +39,44 @@ function cerrarIndice() {
 /***********ABRIR PDFs**************/
 
 function abrir1() {
-	window.open("pdf/anatomia_cerebro.pdf");
+	window.open("pdf/anatomia_cerebro.pdf", "_blank");
 }
 function abrir2() {
-	window.open("pdf/anatomia_corazon.pdf");
+	window.open("pdf/anatomia_corazon.pdf", "_blank");
 }
 function abrir3() {
-	window.open("pdf/anatomia_lengua.pdf");
+	window.open("pdf/anatomia_lengua.pdf", "_blank");
 }
 function abrir4() {
-	window.open("pdf/anatomia_rinon.pdf");
+	window.open("pdf/anatomia_rinon.pdf", "_blank");
 }
 function abrir5() {
-	window.open("pdf/anatomia_ovario.pdf");
+	window.open("pdf/anatomia_ovario.pdf", "_blank");
 }
 
 function abrir6() {
-	window.open("pdf/anatomia_testiculo.pdf");
+	window.open("pdf/anatomia_testiculo.pdf", "_blank");
 }
 function abrir7() {
-	window.open("pdf/anatomia_tiroides.pdf");
+	window.open("pdf/anatomia_tiroides.pdf", "_blank");
 }
 function abrir7a() {
-	window.open("pdf/anatomia_adrenal.pdf");
+	window.open("pdf/anatomia_adrenal.pdf", "_blank");
 }
 function abrir8() {
-	window.open("pdf/anatomia_timo.pdf");
+	window.open("pdf/anatomia_timo.pdf", "_blank");
 }
 function abrir9() {
-	window.open("pdf/anatomia_piel.pdf");
+	window.open("pdf/anatomia_piel.pdf", "_blank");
 }
 function abrir10() {
-	window.open("pdf/anatomia_pierna.pdf");
+	window.open("pdf/anatomia_pierna.pdf", "_blank");
 }
 function abrir11() {
-	window.open("pdf/anatomia_pulmon.pdf");
+	window.open("pdf/anatomia_pulmon.pdf", "_blank");
 }
 function abrir12() {
-	window.open("pdf/anatomia_ojo.pdf");
+	window.open("pdf/anatomia_ojo.pdf", "_blank");
 }
 
 
