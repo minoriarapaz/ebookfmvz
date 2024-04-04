@@ -144,11 +144,12 @@ h4 {
 
 .textos ul {
 	list-style-type: square;
-	list-style-position: outside;
-	margin-left: 1em;
+	list-style-position: inside;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	color: teal;
+	color: darkslategray;
 	margin-bottom: 1em;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 .textos ul li {
 	margin-bottom: .5em;
@@ -254,6 +255,13 @@ lear: bo5h/*debi a que el elemento predecesor es un fichero floar right*/
 	margin-bottom: 0em;
 }
 
+.tablaTitulo {
+	font-weight: bold;
+	font-size: .9em;
+	margin-bottom: 0em;
+	margin-top: 1em;
+	text-align: center;
+}
 table {
 	display: block;
 	position: relative;
@@ -265,12 +273,11 @@ table {
 	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	margin-left: 20%;
 	margin-right: 20%;
-	margin-top: 2em;
+	margin-top: .5em;
 	margin-bottom: 2em;
 	
 }
-tr.tablaFirst {
-}
+
 tr:nth-child(even) {
 	background-color: lavenderblush;
 }
@@ -311,10 +318,14 @@ td {
 	}
 	
 	.textos ol {
-		border-bottom: 1px dashed darkslategray;
 		margin-left: 10%;
 		margin-right: 10%;
 	}
+	.textos ul {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	
 	
 }
 
