@@ -8,7 +8,7 @@ h1, h2  {
 	font-family: Open Sans, "Trebuchet MS", Arial, serif;
 	margin-bottom: 2em;
 	margin-top: 2em;
-	margin-left: 20%;
+
 	color: darkslategray;
 	font-size: 1.4em;
 	display: block;
@@ -27,10 +27,7 @@ h3 {
 }
 h4 {
 	margin-bottom: 1em;
-	margin-top: 3em;
-	margin-left: 10%;
-	margin-right: 10%;
-	
+	margin-top: 3em;	
 	text-align: center;
 }
 .parrafoSeparado {
@@ -56,25 +53,30 @@ h4 {
 }
 
 .textos {
-	
 	box-sizing: border-box;
 	position: relative;
-	/*padding-left: 20px;
-	padding-right: 20px;*/
 	padding-top: 10px;
-	background-color: ghostwhite; /*ghostwhite*/
+	background-color: beige; /*ghostwhite*/
 	overflow: visible;
 	top: 0px;
 	width: 100%;
-	margin: auto;
+/*	margin: auto;*/
 }
 
+@media (max-width: 800px) {
+	.textos {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
 @media (min-width: 800px) {
 	
 	.textos {
 		position: relative; 
 		padding-top: 20px;
 		padding-bottom: 20px;
+		padding-left: 10%;
+		padding-right: 10%;
 		/*antes era el padding general*/
 		overflow: visible;
 		box-shadow: 0px 2px 7px gray;
@@ -89,6 +91,7 @@ h4 {
 	font-variant-caps: small-caps;
 }
 
+
 .textos > p, .DiaSegmento > p {
 	hyphens: auto;
 	-webkit-hyphens: auto;
@@ -100,11 +103,11 @@ h4 {
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	clear: left;
 	color: darkslategray;
-	
+	background-color: orange;
 	margin-bottom: .5em;
 	
-	margin-left: 20%;
-	margin-right: 20%;
+	/*margin-left: 20%;
+	margin-right: 20%;*/
 	
 }
 
@@ -112,13 +115,16 @@ h4 {
 	position: relative;
 	display: block;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	list-style-type: decimal;
-	list-style-position: inside;
 	color: darkslategray;
 	margin-bottom: 1.5em;
-	margin-left: 20%;
-	margin-right: 20%;
+	/*margin-left: 20%;
+	margin-right: 20%;*/
 }
+
+.listaOrdenada_letras {
+	list-style-type: lower-alpha;
+}
+
 
 .textos ol li {
 	margin-left: 0em;
@@ -133,9 +139,6 @@ h4 {
 
 
 
-.botonTexto {display: block; margin: auto; clear: both; width: 100px; height: 35px; padding-top: 5px; font-size: 2em;  margin-bottom: 2em; background-color: mediumseagreen; border-style:inset;}
-.botonTexto p { color: white; transform: rotate(90deg);}
-
 .abajo {
 	transform: rotate(90deg);
 }
@@ -143,13 +146,11 @@ h4 {
 
 
 .textos ul {
-	list-style-type: square;
+	list-style-type: none;
 	list-style-position: inside;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	color: darkslategray;
 	margin-bottom: 1em;
-	margin-left: 20%;
-	margin-right: 20%;
 }
 .textos ul li {
 	margin-bottom: .5em;
@@ -162,12 +163,7 @@ h4 {
 	padding: .5em;
 	font-size: .9em;
 }
-.fontgrande {
-	font-size: 1.1em;
-}
-.fontgrandeenchico {
-	font-size: 1em;
-}
+
 
 
 strong {
@@ -265,73 +261,91 @@ lear: bo5h/*debi a que el elemento predecesor es un fichero floar right*/
 table {
 	display: block;
 	position: relative;
-	clear: both;
-
-	border-collapse: collapse;
 	width: auto;
+	border-collapse: collapse;
 	font-size: .9em;
 	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	margin-left: 20%;
-	margin-right: 20%;
 	margin-top: .5em;
 	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
 	
 }
 
-tr:nth-child(even) {
+
+
+tr.filas:nth-child(even) {
 	background-color: lavenderblush;
 }
-th {
-	padding: .5em;
-	background-color: darkslategray;
+
+td.columnas:nth-child(even) {
+	background-color: lavenderblush;
+}
+td.columna_color {
+	/*background-image: linear-gradient(to right, slateblue, darkslateblue);*/
+	background-color: slategray;
 	color: ghostwhite;
+	border-top: 1px dotted lavenderblush;
 }
 
+
+.primeraFila /*(antes solo th)*/ {
+	background-image: linear-gradient(slateblue, darkslateblue);
+	color: ghostwhite;
+	border-left: 1px solid lavenderblush;
+}
+.esquina {
+	background-color: darkgray;
+	font-size: .9em;
+	padding: 1em;
+	border-right: 1px dotted white;
+}
+th {
+	padding-bottom: .5em;
+	padding-top: .5em;
+}
 td {
-	border: 1px solid slategray;
+	border: 1px solid darkgray;
 	padding: .5em;
-	
 	color: darkslategray;
 }
 
-
+.tipo2 td {
+	text-align: center;
+}
+.tipoAncha {
+	
+}
 
 @media (min-width: 1200px) {
-	.textos > p, table {
-		margin-left: 20%;
-		margin-right: 20%;
-	}
-	h4 {
-		margin-left: 15%;
+	.textos {
+		padding-left: 15%;
+		padding-right: 15%;
 	}
 }
 
 @media (max-width: 700px) {
-	.textos > p, table {
-		margin-left: 0%;
-		margin-right: 0%;
-		padding-left: 10%;
-		padding-right: 10%;
-	}
 	h1, h2 {
 		margin-left: 10%;
 	}
+	.tipoAncha {
+		overflow: scroll;
+	}
 	
-	.textos ol {
-		margin-left: 10%;
-		margin-right: 10%;
+	/*.textos ol {
+		
 	}
 	.textos ul {
-		margin-left: 10%;
-		margin-right: 10%;
+		
 	}
-	
+	*/
 	
 }
 
 @media (max-width: 500px) {
 	.textos {
-	
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 	.textos > p {
 		
@@ -340,14 +354,15 @@ td {
 		hyphens: auto;
 		-webkit-hyphens: auto;
 		-ms-hyphens: auto;
+	}
+	h3, h4 {
 		
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	h3, h4 {
-		margin-left: 0%;
-		padding-left: 20px;
-		padding-right: 20px;
+	
+	.textos ol {
+		list-style-position: inside;
 	}
 }
 
