@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--<link href="/textos.css" rel="stylesheet" type="text/css">-->
+<link href="minipig_estilos/estructura.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/botones.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/cabecera.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/modal.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/textos.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/navegacion.css" rel="stylesheet" type="text/css">
+	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="minipig_estilos/modal.js"></script>
+
+	
+	
+	<script src="minipig_estilos/textos.js"></script>
+	<script src="minipig_estilos/navegacion.js"></script>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	
+<title>Anatomía del Cerdo Miniatura</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body > <!--onload="scrollear()" lo quitaste del body y pasaste al SCRIPT para que SAFARI no se confundiera-->
+	<header class="cabecera" id="micabecera">
+		<div class="container logo-nav-container">
+			
+			<a href="portada.html"><img src="minipig_imagenes/interfaz/logo_provisional.png" alt="logo-header" class="img-full"><img src="minipig_imagenes/interfaz/logo_provisional.png" alt="logochico-header" class="img-mobile"></a>
+			
+			<div id="btnindice" class="boton_indice" onClick="show_indice()"><span class="equis" id="laX"></span>
+				<div id="rayas"><span class="pan"></span><span class="pan"></span><span class="pan"></span></div>
+			</div>
+			
+			<nav class="mininavegador" id="nav-indice">
+				<ul>
+					<li><a  onClick="irPrologoM()">Prólogo</a></li>
+					<li><a  onClick="irIntroM()">Introducción</a></li>
+					<li><a  onClick="irMaterialM()">Material y métodos</a></li>
+					<li><a  onClick="irAnatomiaM()">Anatomía</a>
+						<ol>
+							<li><a onClick="irSistema1M()">Sistema nervioso</a></li>
+							<li><a onClick="irSistema2M()">Sistema cardiovascular</a></li>
+							<li><a onClick="irSistema3M()">Sistema digestivo</a></li>
+							<li><a onClick="irSistema4M()">Sistema urinario</a></li>
+							<li><a onClick="irSistema5M()">Órganos genitales hembra</a></li>
+							<li><a onClick="irSistema6M()">Órganos genitales macho</a></li>
+							<li><a onClick="irSistema7M()">Sistema endócrino</a></li>
+							<li><a onClick="irSistema8M()">Órganos linfoides</a></li>
+							<li><a onClick="irSistema9M()">Sistema tegumentario</a></li>
+							<li><a onClick="irSistema10M()">Sistema locomotor</a></li>
+							<li><a onClick="irSistema11M()">Sistema respiratorio</a></li>
+							<li><a onClick="irSistema12M()">Ojo</a></li>
+						</ol>
+					</li>
+					<li><a onClick="verBiblio()">Bibliografía</a></li>
+				</ul>
+			</nav>
+		</div><!--clase container-->
+		
+		<!--<div class="cajaFijaBolas" id="bolas">
+			<div class="bol_contenedor">
+				<div class="segment_mayor">
+					<div class="segment_minor" id="dias">día</div>
+					<div class="segment_minor"><div id="bolaDia0" class="bola bolaActiva" onMouseDown="funcionClic0()"><div class="bolanumero">0</div></div></div>
+					<div class="segment_minor"><div id="bolaDia1" class="bola" onMouseDown="funcionClic1()"><div class="bolanumero">1</div></div></div>
+					<div class="segment_minor"><div id="bolaDia2" class="bola" onMouseDown="funcionClic2()"><div class="bolanumero">2</div></div></div>
+					<div class="segment_minor"><div id="bolaDia3" class="bola" onMouseDown="funcionClic3()"><div class="bolanumero">3</div></div></div>
+					<div class="segment_minor"><div id="bolaDia4" class="bola" onMouseDown="funcionClic4()"><div class="bolanumero">4</div></div></div>
+					<div class="segment_minor"><div id="bolaDia5" class="bola" onMouseDown="funcionClic5()"><div class="bolanumero">5</div></div></div>
+					<div class="segment_minor"><div id="bolaDia6" class="bola" onMouseDown="funcionClic6()"><div class="bolanumero">6</div></div></div>
+					<div class="segment_minor"><div id="bolaDia7" class="bola" onMouseDown="funcionClic7()"><div class="bolanumero">7</div></div></div>
+					<div class="segment_minor"><div id="bolaDia8" class="bola" onMouseDown="funcionClic8()"><div class="bolanumero">8</div></div></div>
+				</div>
+				<div class="segment_mayor">
+
+					<div class="segment_minor"><div id="bolaDia18" class="bola" onMouseDown="funcionClic18()"><div class="bolanumero">18</div></div></div>
+					<div class="segment_minor"><div id="bolaDia17" class="bola" onMouseDown="funcionClic17()"><div class="bolanumero">17</div></div></div>
+					<div class="segment_minor"><div id="bolaDia16" class="bola" onMouseDown="funcionClic16()"><div class="bolanumero">16</div></div></div>
+					<div class="segment_minor"><div id="bolaDia15" class="bola" onMouseDown="funcionClic15()"><div class="bolanumero">15</div></div></div>
+					<div class="segment_minor"><div id="bolaDia14" class="bola" onMouseDown="funcionClic14()"><div class="bolanumero">14</div></div></div>
+					<div class="segment_minor"><div id="bolaDia13" class="bola" onMouseDown="funcionClic13()"><div class="bolanumero">13</div></div></div>
+					<div class="segment_minor"><div id="bolaDia12" class="bola" onMouseDown="funcionClic12()"><div class="bolanumero">12</div></div></div>
+					<div class="segment_minor"><div id="bolaDia11" class="bola" onMouseDown="funcionClic11()"><div class="bolanumero">11</div></div></div>
+					<div class="segment_minor"><div id="bolaDia10" class="bola" onMouseDown="funcionClic10()"><div class="bolanumero">10</div></div></div>
+					<div class="segment_minor"><div  id="bolaDia9" class="bola" onMouseDown="funcionClic9()"><div class="bolanumero">9</div></div></div>
+				</div>
+			</div>
+		</div>-->
+		
+	</header>
+	
+	
+
+	<div class="contenedor">
+		<div class="barra">
+			<ul>
+				<li id="boton1" class="activo" onClick="irPrologo()">Prólogo</li>
+				<li id="boton2" onClick="irIntro()">Introducción</li>
+				<li id="boton3" onClick="irMaterial()" >Material y métodos</li>
+				<li id="boton4" ><a onClick="irAnatomia()">Anatomía</a>
+					<ol id="anatomia_temas">
+						<li id="btnSub1" onClick="irSistema1()">Sistema nervioso</li>
+						<li id="btnSub2" onClick="irSistema2()">Sistema cardiovascular</li>
+						<li id="btnSub3" onClick="irSistema3()">Sistema digestivo</li>
+						<li id="btnSub4" onClick="irSistema4()">Sistema urinario</li>
+						<li id="btnSub5" onClick="irSistema5()">Órganos genitales hembra</li>
+						<li id="btnSub6" onClick="irSistema6()">Órganos genitales macho</li>
+						<li id="btnSub7" onClick="irSistema7()">Sistema endócrino</li>
+						<li id="btnSub8" onClick="irSistema8()">Órganos linfoides</li>
+						<li id="btnSub9" onClick="irSistema9()">Sistema tegumentario</li>
+						<li id="btnSub10" onClick="irSistema10()">Sistema locomotor</li>
+						<li id="btnSub11" onClick="irSistema11()">Sistema respiratorio</li>
+						<li id="btnSub12" onClick="irSistema12()">Ojo</li>
+					</ol>
+				</li>
+				<li id="boton5" onClick="verBiblio()">Bibliografía</li>
+			</ul>
+		</div><!--BARRA FIN-->
+		
+		<div id="Contenido" class="textos">
+		
+			<!--<div class="modalO" id="modalObjetivo">
+			  	
+				<div class="modal-content-obj" id="textoObjetivo">
+					<p>Esta obra comprende los parámetros espe&shy;cíficos del seguimiento embrionario de la paloma <i>(Columba livia)</i>, mostrados mediante foto&shy;grafías <i>in situ</i> y <i>ex situ</i>, así como con videos que muestran el movi&shy;miento embrio&shy;nario, con la fina&shy;lidad de apoyar a los estu&shy;diantes de la carrera de Medicina Vete&shy;rinaria y Zootecnia inte&shy;resados en la especie, y a los colombó&shy;filos, quienes disponen de poca informa&shy;ción específica de palomas.</p>
+					<p class="indent10">El trabajo es resultado de los estu&shy;dios de maes&shy;tría de la MMVZ Samantha Romo, realiza&shy;dos en las instala&shy;ciones del palomar del Departa&shy;mento de Repro&shy;ducción, en la Facultad de Medicina Vete&shy;rinaria y Zootec&shy;nia de la UNAM.</p>
+					
+					<a class="btnContinuar" onClick="modalObj()">Continuar</a>
+				</div>
+			</div> MODAL OBJETIVO fin-->
+			
+			<!-- M O D A L  BIBLIOGRAFIA -->
+			<div id="modalBiblio" class="modal">
+			  	<span class="cruz" id="tache" onClick="verBiblio()">&times;</span>
+				<div class="modal-content">
+					<div class="bibliotextos">
+						<p><strong>Bodemer WC.</strong> <i>Embriología Moderna.</i> 1<sup>a</sup> ed. Seattle-Washington, USA: Ed. Interamericana; 1972.</p>
+						<p><strong>Climent S, Sarasa M, Domínguez L.</strong> <i>Manual de anatomía y embriología de los animales domésticos, conceptos básicos y datos aplicativos</i>. España: Ed. Acribia; 1998.</p>
+						<p><a href="https://elsitioavicola.com/articles1950/desarrollo-embrionario-daa-a-daa/">elsitioavicola.com/articles1950/&shy;desarrollo-embrionario-daa-a-daa/</a> <small>(visitado en julio de 2019)</small></p>
+						<p><strong>Galindo RSL.</strong> "Embriodiagnosis y ovoscopía. Análisis y control de calidad de los huevos incubables." <i>REDVET. Revista electrónica veterinaria</i>, 2005;VI(3):1-25.</p>
+						<p><strong>Hamburger V, Hamilton LH.</strong> <i>A series of normal stages in the development of the chick embryo.</i> Developmental Dynamics, 1992;195:231-272 (Reprinted from J of Morfology, 1951;88:49-92).</p>
+						<p><strong>Quintana LJA.</strong> <i>Incubatecnia.</i> Cuidad de México; México: Ed. Oralia Hernández; 2016.</p>
+						<p><strong>Merino GR.</strong> <i>Zootecnia avícola, incubación artificial.</i> Cuidad de México; México: Ed. Universidad Nacional Autónoma de México, 2009.</p>
+						<p><strong>Sanz MAR.</strong> <i>Reproducción e incubación en avicultura: El proceso embrionario de las aves.</i> Barcelona, España: 2003.</p>
+						<p><strong>Smith V, Ferres E, Castro-Girona M.</strong> <i>Atlas-tratado de embriogénesis y organogénesis.</i> Valencia, España: Ed. Gregori: 1986.</p>
+						<p><strong>Warin S.</strong> <i>El desarrollo embrionario.</i> Selecciones avícolas, 2008;enero:39-40.</p>
+						<p><a href="http://www.buchonesjiennenses.es/articulos/criaGenetica/desarrolloOntogenia.html">buchonesjiennenses.es/&shy;articulos/&shy;criaGenetica/&shy;desarrolloOntogenia.html</a> <small>(visitado en octubre de 2019).</small></p>
+					</div>
+				</div>
+
+			</div><!--MODAL fin-->
+			
+			
+			<h2 id="aPrologo">Prólogo</h2>
+			<p>De los animales vincu&shy;lados con el ser humano a lo largo de su curso evolutivo y del desa&shy;rrollo de sus civilizaciones, el cerdo (<i>Sus scrofa</i>) adquirió un papel preponderante descrito desde hace casi 45 mil años, en principio como preciada fuente de alimentación humana, producto de la caza (pintura rupestre “Cerdo verrucoso” en la isla de Célebes). Posteriormente, referido en culturas milenarias como la china (4 900 aC), y en 1 500 aC, al inicio su domesticación en Europa. Su importancia emerge hasta nuestros días vinculada a la alimentación humana, a la investigación científica y a desarrollos médicos y farmacológicos.</p>
+			<p id="marcaPrologo">En la actualidad (2022) es la carne de cerdo la segunda más consumida en el mundo.  El cerdo es una de las especies animales que más se cría con la idea de ser un producto para el consumo humano, un modelo de investigación y docencia y, por qué no, un animal de compañía. Los estudios de laboratorio, en este caso de microscopía, una herramienta para fortalecer el estudio y el conocimiento básico de los tejidos y órganos, así como ser el centro del entendimiento de los factores denominados patológicos que modifican la estructura. Desde el siglo pasado los estudios microscópicos fueron la técnica que permitió el diagnóstico de diversas enfermedades. </p>
+			<p>Esta obra está dirigida a estudiantes, investigadores y profesionistas del área de las ciencias médicas, biológicas y de la salud, donde los cerdos tienen un amplio campo de aplicación. Su objetivo fundamental es presentar las características histológicas de los principales órganos de importancia para el diagnóstico de enfermedades y para los estudios del uso de productos farmacológicos y hormonales, entre otros. El conocimiento de la histología es básico para el entendimiento de los procesos fisiológicos y de las afectaciones patológicas de cualquier ser vivo. El lector encontrará órganos seleccionados en diferentes edades: desde el nacimiento (semana cero) hasta las 21 semanas de vida, a nivel microscópico, período a través del cual puede observarse con facilidad su desarrollo gradual.</p>
+			
+			<div  class="raya-separado" id="aIntro"></div>
+			
+			<h2>Introducción</h2>
+			
+			<p>En el mundo hay más de 300 razas porcinas, la mayor parte destinadas para consumo. Se considera que poco más de 40 son miniatura, provenientes de diferentes países.<sup>1</sup>  En 1949, se reporta la cruza de las razas Guinea hog con Piney rooter, de Luisina, lo que originó la conocida Minnesota minipig, de aproximadamente 70 kg en la edad adulta. El objetivo de las cruzas es reducir aún más su tamaño. La Minnesota minipig se cruza con la vietnamita pot belly de la que se obtienen las hembras F1, que a su vez se cruzan con machos Landrance, y después de varias generaciones, se obtienen cerdos miniatura color blanco, a los que se les conoce como Göttingen minipig, los cuales se destinan a la investigación, viven principalmente en bioterios. Su composición genética es 60% vietnamita, 33% Minnesota y 7% Landrace. Actualmente (2022), se conocen diferentes razas de cerdos miniatura (<small>Cuadro 1</small>) de diferentes países, en las cuales se observan sus características morfométricas.</p>
+			
+			<p class="tablaTitulo"><small>Cuadro 1.</small> Origen de algunas razas de cerdos miniatura</p>
+			
+			<table class="tipo1">
+				<tr class="primeraFila">
+					<th style="width:35%">Raza</th>
+					<th style="width:25%">Origen</th>
+					<th style="width:20%">Talla (cm)</th>
+					<th  style="width:20%">Peso (kg)</th>
+				</tr>
+				<tr class="filas">
+					<td>Göttingen</td>
+					<td>Alemania</td>
+					<td style="text-align: center">50</td>
+					<td style="text-align: center">11-38</td>
+				</tr>
+				<tr class="filas">
+					<td>Vietnamita</td>
+					<td>Vietnam</td>
+					<td style="text-align: center">40-50</td>
+					<td style="text-align: center">35-60</td>
+				</tr>
+				<tr class="filas">
+					<td>Pigmea africana</td>
+					<td>África</td>
+					<td style="text-align: center">—</td>
+					<td style="text-align: center">27-90</td>
+				</tr>
+				<tr class="filas">
+					<td>Yucatán</td>
+					<td>México</td>
+					<td style="text-align: center">57</td>
+					<td style="text-align: center">55-90</td>
+				</tr>
+				<tr class="filas">
+					<td>Yucatán micro</td>
+					<td>México</td>
+					<td style="text-align: center">35</td>
+					<td style="text-align: center">30</td>
+				</tr>
+				<tr class="filas">
+					<td>Kune Kune</td>
+					<td>Nueva Zelanda</td>
+					<td style="text-align: center">40-60</td>
+					<td style="text-align: center">60-200</td>
+				</tr>
+				<tr class="filas">
+					<td>Meishan</td>
+					<td>Asia</td>
+					<td style="text-align: center">38-68</td>
+					<td style="text-align: center">60-120</td>
+				</tr>
+				<tr class="filas">
+					<td>American Guinea</td>
+					<td>EUA</td>
+					<td style="text-align: center">55-68</td>
+					<td style="text-align: center">60-98</td>
+				</tr>
+				<tr class="filas">
+					<td>Juliana</td>
+					<td>EUA</td>
+					<td style="text-align: center">43</td>
+					<td style="text-align: center">32</td>
+				</tr>
+				<tr class="filas">
+					<td>Pata de mula</td>
+					<td>EUA</td>
+					<td style="text-align: center">—</td>
+					<td style="text-align: center">—</td>
+				</tr>
+				<tr class="filas">
+					<td>Ossabaw island</td>
+					<td>EUA</td>
+					<td style="text-align: center">51</td>
+					<td style="text-align: center">90</td>
+				</tr>
+				<tr class="filas">
+					<td>Sinclair-Minnesota</td>
+					<td>EUA</td>
+					<td style="text-align: center">—</td>
+					<td style="text-align: center">55-70</td>
+				</tr>
+				<tr class="filas">
+					<td>Ohmini</td>
+					<td>Japón</td>
+					<td style="text-align: center">—</td>
+					<td style="text-align: center">—</td>
+				</tr>
+			</table>
+			
+			<p>Estas razas se han utilizado con diversos propósitos, sea como animales de compañía o de investigación. Su tamaño ha favorecido el desarrollo de investigaciones. Por otra parte, en estudios realizados en órganos del aparato reproductor del macho han mostrado diferencias histológicas con los cerdos comerciales.</p>
+			<h3>Los objetivos de esta obra son:</h3>
+			<ol class="especial">
+				<li><strong>Mostrar por medio de imágenes anatómicas el desarrollo de los principales órganos de los cerdos miniatura que ocurren a través del crecimiento natural a las 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21 semanas de vida.</strong></li>
+				<li><strong>Presentar la morfometría de los principales órganos del cerdo miniatura.</strong></li>
+			</ol>
+			
+			
+			<div  class="raya-separado" id="aMaterial"></div>
+			
+			<h2>Material y métodos</h2>
+			<p>Se contó con 22 cerdos miniatura divididos en dos grupos 11 hembras y 11 machos, que se sacrificaron a las siguientes semanas de edad: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21. Las hembras que se utilizaron fueron las de control de la tesis de licenciatura Efecto en el desarrollo de foliculos ováricos en cerdas miniatura mediante el empleo de un bloqueador de GnRH (Improvac), el cual fue aprobado por el CICUA con el número 0662, el 21 de octubre de 2020. Los machos, a su vez, fueron los controles de la tesis de maestría Calidad de la carne y rendimiento de la canal en cerdos miniatura vacunados conta GnRH bajo protocolos de corta y larga duración, con la aprobación del comité SICUAE de la FMVZ-UNAM, bajo el protocolo con clave MC-2018/2-18.</p>
+			<p>Los animales fueron alojados y alimentados según la NOM-062-ZOO-1999, en corrales tipo danés con las siguientes dimensiones 1.5 m × 3 m, proporcionando un espacio de 4.5 m2. Para la matanza se procedió según lo indicado por la NOM-033-ZOO-1993, se realizó de la siguiente manera: sujeción del animal por los corvejones, el animal quedó mirando hacia abajo, es decir, con la cabeza en dirección al suelo. Se mojó al animal por completo. Con tenazas se insensibilizó al animal mediante shock eléctrico a 1.3 A, se colocó entre la oreja y el ojo de cada lado en el punto de intersección donde se cruzan una línea horizontal, que va de la comisura lateral del ojo hacia atrás, y una línea vertical que baja desde la base de la oreja (sobre las sienes del animal), y permanecieron en contacto con la piel de 3 a 6 segundos.</p>
+			<p>En menos de 10 segundos, se desangró el animal mediante el corte de venas cavas y tronco braquiocefálico. El corte se realizó en la depresión por delante del esternón, dirigiendo la punta del cuchillo hacia adentro al corazón a 45° de la línea media y con 45° de inclinación perpendicular al cuello para cortar el seno de las cavas y después girando la hoja 90° para seccionar el tronco braquiocefálico. Para esto, la hoja debe contar con por lo menos 35 cm de largo. Pérdida de sangre por corte e incremento de ésta por posición vertical (permanece de la misma forma). Los desechos biológicos, es decir, el resto del animal se colocaron en una bolsa amarilla correspondiente a residuos patológicos; los desechos de material (gasas, torundas, jeringas y guantes) se colocaron en una bolsa roja correspondiente a residuos no anatómicos de acuerdo con los lineamientos del manejo de RPBI de la FMVZ-UNAM. Los órganos representativos de cada uno de los sistemas que se seleccionaron fueron:</p>
+			<ol class="listaOrdenada_letras">
+				<li>Sistema nervioso: cerebro y cerebelo.</li>
+				<li>Sistema cardiovascular: corazón.</li>
+				<li>Sistema digestivo: lengua, esófago, estómago, intestino delgado e intestino grueso, hígado y páncreas.</li>
+				<li>Sistema urinario: riñón y vejiga.</li>
+				<li>Órganos reproductores: hembra: ovario, tuba uterina, útero, vagina y vulva; macho: testículo, epidídimo, pene, vesículas seminales, glándulas bulbouretrales y próstata.</li>
+				<li>Sistema endócrino: tiroides, hipófisis y adrenales.</li>
+				<li>Órganos linfoides: bazo y timo.</li>
+				<li>Sistema tegumentario y locomotor: piel y músculo (región dorsal (lomo) y pierna).</li>
+				<li>Sistema respiratorio: tráquea y pulmones.</li>
+				<li>Ojo</li>
+			</ol>
+			<p>Después del sacrificio se tomaron fotografías de cada órgano con cámara Canon en dos estudios de fotografía móvil ajustados al tamaño del órgano a fotografiar. Se evaluó y registró la alometría (largo (cm), ancho (cm), peso (g)) de cada órgano de los mencionados en las edades consideradas. </p>
+			
+			<div  class="raya-separado" id="aAnatomia"></div>
+			
+			
+			<div class="h1envolvente h1sinpadding"><h2 >Anatomía del cerdo miniatura</h2></div>
+			
+			<img class="esquema" alt="ilustracion de adorno" src="minipig_imagenes/interfaz/pigs.png">
+			
+			
+			<div class="raya-separado-sub" id="sistema1"></div>
+			<h3>Sistema nervioso</h3>
+			<p>El sistema nervioso hace que el organismo reaccione ante el medio interno y externo. Además, controla y lleva a cabo distintas actividades metabólicas. El cerebro y el cerebelo se localizan en la cabeza, cubiertos o protegidos por el cráneo. El sistema nervioso está compuesto por el sistema nervioso central (SNC) y el sistema nervioso periférico (SNP). El snc a su vez está constituido por el encéfalo y la médula espinal, mientras que el snp está formado por los nervios y los ganglios craneales, espinales y autónomos. El sistema nervioso se origina de la capa germinal ectodérmica. A continuación se presentan algunas de sus características anatómicas y las funciones del cerebro y cerebelo..</p>
+			
+			
+			
+			
+			<h4 class="txt-izquierda">Cerebro</h4>
+			<p>La corteza cerebral se divide en las siguientes regiones:</p>
+			<ul>
+				<li><strong>1) Occipital.</strong> Localizada en la parte posterior del cerebro, está constituida por tres o cuatro pequeños giros orientados horizontalmente y separados por surcos poco profundos. Es el centro del sistema visual de la percepción (la vista); la interpretación de imágenes, el reconocimiento de ruidos y  el reconocimiento espacial.</li>
+				<li><strong>2) Pariental.</strong> Se localiza en la parte superior de las regiones temporal y occipital y ocupa la mitad caudal y dorsal de cada hemisferio. Esta parte del cerebro es la encargada de recibir las sensaciones de tacto.</li>
+				<li><strong>3) Frontal.</strong> Está localizado en la parte anterior del cerebro. Sus funciones son el reloj biológico y la conducta.</li>
+				<li><strong>4) Temporal.</strong> Corresponde a la parte lateral de cerebro, en esta porción de la corteza se procesa la audición, aspectos sencioriales y la memoria.</li>
+				<li><strong>5) Fisura longitudinal.</strong> Divide longitudinalmente al cerebro en dos hemisferios unidos entre sí por el cuerpo calloso. Durante el desarrollo, a medida que el cerebro aumenta de tamaño se producen giros y surcos, tales como los surcos central, colateral, coroideo y hipocámpico.</li>
+			</ul>
+			
+			<h4 class="txt-izquierda">Cerebelo</h4>
+			<p>El cerebelo está unido a la superficie dorsal y caudal del tallo del encéfalo. Se incluye en un estuche osteofibroso formado por una pared inferior y otra superior. El cerebelo participa en la coordinación de movimientos, de funciones cognitivas como la atención, el aprendizaje y otros estímulos sensoriales temporales. De la morfometría de cerebro y el cerebelo de los cerdos miniatura, se anotan las medidas en centímetros y el peso en gramos promedio, en el <small>Cuadro 2:</small></p>
+			
+			<p class="tablaTitulo"><small>Cuadro 2.</small> Peso del cerebro y el cerebelo juntos, además del largo y el ancho</p>
+			
+			<table class="tipo2 tipoAncha">
+				<tr class="primeraFila">
+					<th class="esquina">Órgano / edad (semanas)</th>
+					<th>0</th>
+					<th>1</th>
+					<th>3</th>
+					<th>5</th>
+					<th>7</th>
+					<th>9</th>
+					<th>11</th>
+					<th>13</th>
+					<th>15</th>
+					<th>17</th>
+					<th>19</th>
+					<th>21</th>
+				</tr>
+				<tr>
+					<td class="columna_color">Cerebro-cerebelo</td>
+					<td>17.3</td>
+					<td>23</td>
+					<td>24</td>
+					<td>35</td>
+					<td>36</td>
+					<td>39</td>
+					<td>42</td>
+					<td>45</td>
+					<td>46</td>
+					<td>46</td>
+					<td>48</td>
+					<td>52</td>
+				</tr>
+				<tr>
+					<td class="columna_color">Cerebro<br><small>longitud (cm)</small></td>
+					<td>4.4</td>
+					<td>4.4</td>
+					<td>4.5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td class="columna_color">Cerebro<br><small>anchura (cm)</small></td>
+					<td>4</td>
+					<td>4.4</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>6</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td class="columna_color">Cerebelo<br><small>longitud (cm)</small></td>
+					<td>1</td>
+					<td>1.3</td>
+					<td>2</td>
+					<td>2</td>
+					<td>2.5</td>
+					<td>2.5</td>
+					<td>2.5</td>
+					<td>2.5</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3.5</td>
+					<td>3.5</td>
+				</tr>
+				<tr>
+					<td class="columna_color">Cerebelo<br><small>anchura (cm)</small></td>
+					<td>1</td>
+					<td>1</td>
+					<td>2</td>
+					<td>2.5</td>
+					<td>2.5</td>
+					<td>2.5</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3.5</td>
+					<td>3.5</td>
+					<td>4</td>
+				</tr>
+			</table>
+			
+			
+			<p>A continuación se presentan las imágenes del cerebro y cerebelo de los cerdos miniatura a las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 13, 15, 17, 19 y 21.</p>
+			
+			<button onClick="abrir1()">Cerebro y cerebelo</button>
+			
+			<div class="raya-separado-sub" id="sistema2"></div>
+			<h3>Sistema cardiovascular</h3>
+			<p>Para fines de esta obra únicamente se presentará el corazón, ya que constituye una estructura importante para el diagnóstico de diversas enfermedades en los cerdos. En cuanto a los orígenes del tubo cardíaco, se forma a partir de grupos de células angiogénicas: las que se encuentran en la placa o excrecencia cardiogénica. La placa cardiogénica se deriva del mesodermo esplacnopleural. </p>
+			
+			<h4 class="txt-izquierda">Corazón</h4>
+			<p>El corazón se localiza en el tórax, 3/5 partes hacia la izquierda, dorsal al esternón, a ambos lados se encuentran los pulmones. Está envuelto por la bolsa pericárdica, que tiene dos hojas, una interna sobre la superficie cardíaca, y otra externa ligada a los grandes vasos, entre ellas existe líquido. El corazón tiene forma de cono invertido dirigido a la izquierda. En la base se encuentran los vasos sanguíneos encargados de ingresar (las cavas) y sacar la sangre, la aorta y el tronco pulmonar. Tiene dos superficies:  atrial y auricular, además  de dos bordes: ventriculares derecho e izquierdo. Es irrigado por las arterias coronarias que llevan sangre al músculo cardíaco. En su anatomía interna está dividido en cuatro cavidades: dos del lado derecho y dos en el izquierdo.</p>
+			
+			<ul>
+				<li>Las cavidades superiores se denominan atrios, separados por el tabique interatrial y las inferiores se denominan ventrículos que a su vez se encuentran divididas por el tabique interventricular. De cada atrio deriva una orejuela denominada aurícula.</li>
+				<li>Los atrios están constituidos, del exterior al interior por el epicardio, el miocardio y en endocardio. La estructura de los ventrículos es similar, la diferencia es el grosor del miocardio, es más delgado en los atrios y en los ventrículos, el de mayor espesor es el izquierdo.</li>
+				<li>La comunicación es entre atrios y ventrículos, a través de las válvulas, llamadas tricúspide y mitral, además están las válvulas pulmonar y aórtica, de las que su función es abrir y dejar pasar la sangre, para después cerrarse y evitar el retorno sanguíneo.</li>
+			</ul>
+			
+			<p>A continuación, se presenta la morfometría del corazón del cerdo miniatura a diferentes edades <small>(Cuadro 3)</small>.</p>
+			
+			<p>A continuación se presentan las imágenes del corazón de los cerdos miniatura de las siguientes edades (semanas): 0, 1, 5, 7, 9, 11, 13, 15, 17 y 21.</p>
+			<button onClick="abrir2()">Corazón</button>
+			
+			
+			<div class="raya-separado-sub" id="sistema3"></div>
+			<h3>Sistema digestivo</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<button onClick="abrir3()">Lengua</button>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			
+			
+			<div class="raya-separado-sub" id="sistema4"></div>
+			<h3>Sistema urinario</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir4()">Riñón</button>
+			
+			<div class="raya-separado-sub" id="sistema5"></div>
+			<h3>Órganos genitales - hembra</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir5()">Ovario</button>
+			
+			
+			<div class="raya-separado-sub" id="sistema6"></div>
+			<h3>Órganos genitales - macho</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir6()">Testículo</button>
+			
+			
+			
+			<div class="raya-separado-sub" id="sistema7"></div>
+			<h3>Sistema endócrino</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir7()">Tiróides</button>
+			<button onClick="abrir7a()">G. adrenales</button>
+			
+			
+			
+			<div class="raya-separado-sub" id="sistema8"></div>
+			<h3>Órganos linfoides</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir8()">Timo</button>
+			
+			
+			
+			<div class="raya-separado-sub" id="sistema9"></div>
+			<h3>Sistema tegumentario</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir9()">Piel</button>
+			
+			<div class="raya-separado-sub" id="sistema10"></div>
+			<h3>Sistema locomotor</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir10()">Dorso/pierna</button>
+			
+			<div class="raya-separado-sub" id="sistema11"></div>
+			<h3>Sistema respiratorio</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			<button onClick="abrir11()">Pulmón</button>
+			
+			<div class="raya-separado-sub" id="sistema12"></div>
+			<h3>Ojo</h3>
+			<h4>Subtema</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in justo nec mi iaculis mattis. Praesent dapibus orci eu dui faucibus, vehicula vehicula libero iaculis. Nullam vel purus diam. Duis scelerisque laoreet lectus vitae gravida. Nullam posuere condimentum nulla, non consequat risus consequat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec gravida et urna ac venenatis. Cras at semper sapien.</p>
+			<p>In cursus elit vel mauris vestibulum hendrerit eu eget nulla. Curabitur tempor porta dapibus. Ut in lacinia massa. Morbi quis mollis mauris, ut mollis arcu. Maecenas vitae massa et orci tincidunt dignissim. Duis augue tortor, elementum id dui et, convallis tempus nulla. In hendrerit tempor finibus. Suspendisse aliquam nulla dui, at pellentesque sem rhoncus vitae. Fusce rutrum, ex at faucibus blandit, enim tellus consequat risus, eget rhoncus mi justo tempus libero. Phasellus tincidunt tortor at urna consequat mattis. Curabitur eu nunc blandit, tincidunt arcu ac, efficitur dolor. Proin ultricies ex sed euismod ultricies.</p>
+			<p>Pellentesque malesuada magna sed lacus varius, at viverra dui tempor. Nulla tempor risus eget dolor rhoncus lacinia. Maecenas eu commodo metus, at hendrerit ligula. Curabitur ullamcorper odio orci, id consequat nisl porta nec. Nulla sit amet pretium dui, id ullamcorper est. Integer eu sapien in elit semper elementum eu et lectus. Aliquam erat volutpat. Vestibulum placerat justo libero, eu venenatis lacus dapibus sed. Maecenas sapien felis, laoreet non sapien non, scelerisque efficitur augue. Sed scelerisque sem et mi placerat convallis. Integer blandit odio bibendum urna convallis lacinia. Nulla augue sem, mattis ut risus non, congue imperdiet justo.</p>
+			<p>In hac habitasse platea dictumst. Vestibulum interdum non justo vitae pharetra. Sed molestie libero tincidunt lacus convallis facilisis. Ut ac urna purus. Fusce nec orci elit. Praesent sollicitudin sodales turpis. Integer vitae eleifend dui. Nullam velit est, pellentesque in scelerisque faucibus, molestie a nibh. Donec vitae tortor vitae dui ultricies pretium sit amet sit amet urna. Suspendisse dignissim eleifend finibus. Suspendisse bibendum massa at diam placerat congue. Phasellus ullamcorper ante sed ex pellentesque, convallis efficitur sapien fermentum.</p>
+			
+			<button onClick="abrir12()">Ojo</button>
+			
+			
+			<div class="raya-separado-sub" id="finSistemas"></div>
+			
+			
+			
+			
+			
+		</div><!-- TEXTOS (ESPACIO DERECHO)-->
+		
+		
+		
+		
+		
+		
+	</div><!-- CONTENEDOR TODO TODO-->
+	
+	
+	
+</body>
+	
+	
+</html>
