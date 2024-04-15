@@ -56,7 +56,7 @@ h4 {
 	box-sizing: border-box;
 	position: relative;
 	padding-top: 10px;
-	background-color: beige; /*ghostwhite*/
+	background-color: ghostwhite; /*ghostwhite*/
 	overflow: visible;
 	top: 0px;
 	width: 100%;
@@ -87,7 +87,7 @@ h4 {
 		margin-right: 0;
 	}
 }
-.versalita {
+spam.versalita {
 	font-variant-caps: small-caps;
 }
 
@@ -103,7 +103,6 @@ h4 {
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	clear: left;
 	color: darkslategray;
-	background-color: orange;
 	margin-bottom: .5em;
 	
 	/*margin-left: 20%;
@@ -151,6 +150,9 @@ h4 {
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	color: darkslategray;
 	margin-bottom: 1em;
+}
+.textos ul.bullet {
+	list-style-type: disc;
 }
 .textos ul li {
 	margin-bottom: .5em;
@@ -229,10 +231,10 @@ td strong {
 	position: relative;
 	display: block;
 	width: 100%;
-	height: 1px;
+	height: 2px;
 	background-color: slateblue;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-top: 5em;
+	margin-bottom: 5em;
 }
 
 .h1envolvente {
@@ -251,12 +253,13 @@ lear: bo5h/*debi a que el elemento predecesor es un fichero floar right*/
 	margin-bottom: 0em;
 }
 
-.tablaTitulo {
+p.tablaTitulo {
 	font-weight: bold;
 	font-size: .9em;
 	margin-bottom: 0em;
-	margin-top: 1em;
+	margin-top: 2em;
 	text-align: center;
+	color: slategray;
 }
 table {
 	display: block;
@@ -285,7 +288,6 @@ td.columna_color {
 	/*background-image: linear-gradient(to right, slateblue, darkslateblue);*/
 	background-color: slategray;
 	color: ghostwhite;
-	border-top: 1px dotted lavenderblush;
 }
 
 
@@ -298,20 +300,24 @@ td.columna_color {
 	background-color: darkgray;
 	font-size: .9em;
 	padding: 1em;
-	border-right: 1px dotted white;
 }
 th {
 	padding-bottom: .5em;
 	padding-top: .5em;
+	border-right: 1px solid slateblue;
 }
 td {
 	border: 1px solid darkgray;
-	padding: .5em;
+	padding: .3em;
 	color: darkslategray;
 }
 
 .tipo2 td {
 	text-align: center;
+}
+.tipo2 th.celdaespecial {
+	padding-left: .5em;
+	padding-right: .5em;
 }
 .tipoAncha {
 	

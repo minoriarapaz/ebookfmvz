@@ -171,23 +171,17 @@ function irSistema9() {
 	window.scroll(
 		{top: (document.getElementById("sistema9").offsetTop - compensacion), left: 0, }
 	);
-	console.log("sistema tegumentario");
+	console.log("sistema tegumentario y locomotor");
 }
 function irSistema10() {
 	window.scroll(
 		{top: (document.getElementById("sistema10").offsetTop - compensacion), left: 0, }
 	);
-	console.log("sistema locomotor");
+	console.log("sistema respiratorio");
 }
 function irSistema11() {
 	window.scroll(
 		{top: (document.getElementById("sistema11").offsetTop - compensacion), left: 0, }
-	);
-	console.log("sistema respiratorio");
-}
-function irSistema12() {
-	window.scroll(
-		{top: (document.getElementById("sistema12").offsetTop - compensacion), left: 0, }
 	);
 	console.log("ojo");
 }
