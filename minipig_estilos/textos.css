@@ -21,6 +21,7 @@ h3, h4 {
 	display: block;
 	color: darkslategray;
 }
+
 h3 {
 	margin-bottom: 2em;
 	margin-top: 2.5em;
@@ -268,14 +269,30 @@ table {
 	border-collapse: collapse;
 	font-size: .9em;
 	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	margin-top: .5em;
+	margin-top: 1.5em;
 	margin-bottom: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	
+	border-top: 1px dotted slategray;
+}
+/*Nuevas epub*/ 
+table caption {
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-top: .5em;
+	text-align: left;
+	color: slategray;
 }
 
+tr.filaColor > td:first-child {
+	font-weight: bold;
+	background-color: transparent;
+}
 
+tr.filaColor > td:nth-child(even) {
+	background-color: lavenderblush;
+}
+/*Nuevas end*/ 
 
 tr.filas:nth-child(even) {
 	background-color: lavenderblush;
@@ -284,11 +301,7 @@ tr.filas:nth-child(even) {
 td.columnas:nth-child(even) {
 	background-color: lavenderblush;
 }
-td.columna_color {
-	/*background-image: linear-gradient(to right, slateblue, darkslateblue);*/
-	background-color: slategray;
-	color: ghostwhite;
-}
+
 
 
 .primeraFila /*(antes solo th)*/ {
@@ -319,8 +332,8 @@ td {
 	padding-left: .5em;
 	padding-right: .5em;
 }
-.tipoAncha {
-	
+table.tipoAncha {
+	overflow: auto;
 }
 
 @media (min-width: 1200px) {
