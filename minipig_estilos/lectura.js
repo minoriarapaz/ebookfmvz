@@ -34,10 +34,15 @@ $(document).ready(function(){
 	  
 	$("p").addClass("textoColorClaro");
 	$("p").removeClass("textoColorMedio textoColorDefaul")
+	  
+	$("ol").removeClass("textoColorMedio");
 	 	  /*aparte de los parrafos*/
 	$("h2").addClass("textoColorClaro");
 	$("h3").addClass("textoColorClaro");
 	$("h4").addClass("textoColorClaro");
+	 
+	$("ol").addClass("textoColorClaro");
+	$("ul").addClass("textoColorClaro");
 	  
 	  
 	  /*aparte de los parrafos*/
@@ -47,10 +52,17 @@ $(document).ready(function(){
     $(this).addClass("defaul");
 	$(this).siblings().removeClass("defaul");
 	$("p").addClass("textoColorMedio");
+	$("ol").addClass("textoColorMedio");
+	$("ul").addClass("textoColorMedio");
+		
 	$("p").removeClass("textoColorClaro textoColorDefaul")
 	$("h2").removeClass("textoColorClaro");
 	$("h3").removeClass("textoColorClaro");
 	$("h4").removeClass("textoColorClaro");
+		
+	$("ol").removeClass("textoColorClaro");
+	$("ul").removeClass("textoColorClaro");
+	
 	
   });
 	
@@ -60,9 +72,15 @@ $(document).ready(function(){
 	$(this).siblings().removeClass("defaul");
 	$("p").addClass("textoColorDefaul");
 	$("p").removeClass("textoColorMedio textoColorClaro")
+		
+	
 	$("h2").removeClass("textoColorClaro");
 	$("h3").removeClass("textoColorClaro");
 	$("h4").removeClass("textoColorClaro");
+		
+	$("ol").removeClass("textoColorClaro textoColorMedio");
+	$("ul").removeClass("textoColorClaro textoColorMedio");
+		
   });
 });
 

@@ -111,7 +111,7 @@ spam.versalita {
 }
 /*para el control de lectura*/
 .textoColorClaro {color: gainsboro;}
-.textoColorMedio {color: #663333;}
+.textoColorMedio {color: #663333; /*#663333;*/}
 .textoColorDefaul {color: inherit;}
 /*para el control de lectura FFFIIINNN*/
 .textos ol {
@@ -151,9 +151,9 @@ spam.versalita {
 	list-style-type: none;
 	list-style-position: inside;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	color: darkslategray;
 	margin-bottom: 1em;
 }
+
 .textos ul.bullet {
 	list-style-type: disc;
 }
@@ -171,9 +171,6 @@ spam.versalita {
 
 
 
-strong {
-	color: darkslategray;
-}
 li strong {
 	font-weight: bold;
 }
@@ -288,18 +285,24 @@ table caption {
 
 tr.filaColor > td:first-child {
 	font-weight: bold;
-	background-color: transparent;
+	background-color: transparent; /*no sirve porque lo ordenas en el ODD*/
 }
 
-tr.filaColor > td:nth-child(even) {
+table.tipo2 tr.filaColor > td:nth-child(even) {
 	background-color: lavenderblush;
+}
+table.tipo2 tr.filaColor > td:nth-child(odd) {
+	background-color: ghostwhite;
 }
 /*Nuevas end*/ 
-
-tr.filas:nth-child(even) {
+table.tipo2 tr > td /*/las tablas con una sola fila de datos)*/ {
 	background-color: lavenderblush;
 }
-tr.filas:nth-child(odd) {
+
+table.tipo1 tr.filas:nth-child(even) {
+	background-color: lavenderblush;
+}
+table.tipo1 tr.filas:nth-child(odd) {
 	background-color: ghostwhite;
 }
 
@@ -307,9 +310,6 @@ tr.filas:nth-child(odd) {
 	background-color: transparent;
 }
 
-td.columnas:nth-child(even) {
-	background-color: lavenderblush;
-}
 
 
 
