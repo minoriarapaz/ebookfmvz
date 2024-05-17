@@ -11,6 +11,7 @@
 <link href="minipig_estilos/modal.css" rel="stylesheet" type="text/css">
 <link href="minipig_estilos/textos.css" rel="stylesheet" type="text/css">
 <link href="minipig_estilos/navegacion.css" rel="stylesheet" type="text/css">
+<link href="minipig_estilos/lectura.css" rel="stylesheet" type="text/css">
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="minipig_estilos/modal.js"></script>
@@ -19,6 +20,7 @@
 	
 	<script src="minipig_estilos/textos.js"></script>
 	<script src="minipig_estilos/navegacion.js"></script>
+	<script src="minipig_estilos/lectura.js"></script>
 	
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +31,7 @@
 
 </head>
 
-<body > <!--onload="scrollear()" lo quitaste del body y pasaste al SCRIPT para que SAFARI no se confundiera-->
+<body> <!--onload="scrollear()" lo quitaste del body y pasaste al SCRIPT para que SAFARI no se confundiera-->
 	<header class="cabecera" id="micabecera">
 		<div class="container logo-nav-container">
 			
@@ -64,41 +66,43 @@
 			</nav>
 		</div><!--clase container-->
 		
-		<!--<div class="cajaFijaBolas" id="bolas">
-			<div class="bol_contenedor">
-				<div class="segment_mayor">
-					<div class="segment_minor" id="dias">día</div>
-					<div class="segment_minor"><div id="bolaDia0" class="bola bolaActiva" onMouseDown="funcionClic0()"><div class="bolanumero">0</div></div></div>
-					<div class="segment_minor"><div id="bolaDia1" class="bola" onMouseDown="funcionClic1()"><div class="bolanumero">1</div></div></div>
-					<div class="segment_minor"><div id="bolaDia2" class="bola" onMouseDown="funcionClic2()"><div class="bolanumero">2</div></div></div>
-					<div class="segment_minor"><div id="bolaDia3" class="bola" onMouseDown="funcionClic3()"><div class="bolanumero">3</div></div></div>
-					<div class="segment_minor"><div id="bolaDia4" class="bola" onMouseDown="funcionClic4()"><div class="bolanumero">4</div></div></div>
-					<div class="segment_minor"><div id="bolaDia5" class="bola" onMouseDown="funcionClic5()"><div class="bolanumero">5</div></div></div>
-					<div class="segment_minor"><div id="bolaDia6" class="bola" onMouseDown="funcionClic6()"><div class="bolanumero">6</div></div></div>
-					<div class="segment_minor"><div id="bolaDia7" class="bola" onMouseDown="funcionClic7()"><div class="bolanumero">7</div></div></div>
-					<div class="segment_minor"><div id="bolaDia8" class="bola" onMouseDown="funcionClic8()"><div class="bolanumero">8</div></div></div>
-				</div>
-				<div class="segment_mayor">
-
-					<div class="segment_minor"><div id="bolaDia18" class="bola" onMouseDown="funcionClic18()"><div class="bolanumero">18</div></div></div>
-					<div class="segment_minor"><div id="bolaDia17" class="bola" onMouseDown="funcionClic17()"><div class="bolanumero">17</div></div></div>
-					<div class="segment_minor"><div id="bolaDia16" class="bola" onMouseDown="funcionClic16()"><div class="bolanumero">16</div></div></div>
-					<div class="segment_minor"><div id="bolaDia15" class="bola" onMouseDown="funcionClic15()"><div class="bolanumero">15</div></div></div>
-					<div class="segment_minor"><div id="bolaDia14" class="bola" onMouseDown="funcionClic14()"><div class="bolanumero">14</div></div></div>
-					<div class="segment_minor"><div id="bolaDia13" class="bola" onMouseDown="funcionClic13()"><div class="bolanumero">13</div></div></div>
-					<div class="segment_minor"><div id="bolaDia12" class="bola" onMouseDown="funcionClic12()"><div class="bolanumero">12</div></div></div>
-					<div class="segment_minor"><div id="bolaDia11" class="bola" onMouseDown="funcionClic11()"><div class="bolanumero">11</div></div></div>
-					<div class="segment_minor"><div id="bolaDia10" class="bola" onMouseDown="funcionClic10()"><div class="bolanumero">10</div></div></div>
-					<div class="segment_minor"><div  id="bolaDia9" class="bola" onMouseDown="funcionClic9()"><div class="bolanumero">9</div></div></div>
-				</div>
-			</div>
-		</div>-->
+		
+		
+		
 		
 	</header>
 	
 	
 
 	<div class="contenedor">
+		
+		
+		<!--CONTROLES DE LECTURA-->
+		<div id="ojo" class="btnOjo" onclick="showControl()">
+			<img class="imgBtn" src="minipig_imagenes/interfaz/icon_ojoblanco.png" alt="btnojo">
+		</div>
+		
+		
+		<div id="Control" class="controles">
+		
+			<div id="control_vacio" class="control_sec"></div>
+			<div class="control_sec izquierdo">
+				<button id="bLM" class="boton_en_linea bletraM defaul" onclick="achicar()">Aa</button>
+				<button id="bLG" class="boton_en_linea bletraG" onclick="agrandar(0)">Aa</button>
+				<button id="bLEG" class="boton_en_linea bletraEG" onclick="agrandar(1)">Aa</button>
+			</div>
+			<div class="control_sec derecho">
+				<div id="bClaro" class="botonbola claro defaul" onclick="colorClaro()"></div>
+				<div id="bOscuro" class="botonbola oscuro" onclick="colorOscuro()"></div>
+				<div id="bMedio" class="botonbola medio" onClick="colorMedio()"></div>
+			<!--<button class="boton">fondo</button>-->
+			</div>
+			
+			<div id="control_vacio2" class="control_sec"></div>
+			
+		</div>
+		<!--CONTROLES LECTURA END-->
+		
 		<div class="barra">
 			<ul>
 				<li id="boton1" class="activo" onClick="irPrologo()">Prólogo</li>
@@ -115,8 +119,8 @@
 						<li id="btnSub7" onClick="irSistema7()">Sistema endócrino</li>
 						<li id="btnSub8" onClick="irSistema8()">Órganos linfoides</li>
 						<li id="btnSub9" onClick="irSistema9()">Sistema tegumentario y locomotor</li>
-						<li id="btnSub11" onClick="irSistema10()">Sistema respiratorio</li>
-						<li id="btnSub12" onClick="irSistema11()">Ojo</li>
+						<li id="btnSub10" onClick="irSistema10()">Sistema respiratorio</li>
+						<li id="btnSub11" onClick="irSistema11()">Ojo</li>
 					</ol>
 				</li>
 				<li id="boton5" onClick="verBiblio()">Bibliografía</li>
@@ -163,9 +167,9 @@
 			
 			
 			<h2 id="aPrologo">Prólogo</h2>
-			<p>De los animales vincu&shy;lados con el ser humano a lo largo de su curso evolutivo y del desa&shy;rrollo de sus civilizaciones, el cerdo (<i>Sus scrofa</i>) adquirió un papel preponderante descrito desde hace casi 45 mil años, en principio como preciada fuente de alimentación humana, producto de la caza (pintura rupestre “Cerdo verrucoso” en la isla de Célebes). Posteriormente, referido en culturas milenarias como la china (4 900 aC), y en 1 500 aC, al inicio su domesticación en Europa. Su importancia emerge hasta nuestros días vinculada a la alimentación humana, a la investigación científica y a desarrollos médicos y farmacológicos.</p>
-			<p id="marcaPrologo">En la actualidad (2022) es la carne de cerdo la segunda más consumida en el mundo.  El cerdo es una de las especies animales que más se cría con la idea de ser un producto para el consumo humano, un modelo de investigación y docencia y, por qué no, un animal de compañía. Los estudios de laboratorio, en este caso de microscopía, una herramienta para fortalecer el estudio y el conocimiento básico de los tejidos y órganos, así como ser el centro del entendimiento de los factores denominados patológicos que modifican la estructura. Desde el siglo pasado los estudios microscópicos fueron la técnica que permitió el diagnóstico de diversas enfermedades. </p>
-			<p>Esta obra está dirigida a estudiantes, investigadores y profesionistas del área de las ciencias médicas, biológicas y de la salud, donde los cerdos tienen un amplio campo de aplicación. Su objetivo fundamental es presentar las características histológicas de los principales órganos de importancia para el diagnóstico de enfermedades y para los estudios del uso de productos farmacológicos y hormonales, entre otros. El conocimiento de la histología es básico para el entendimiento de los procesos fisiológicos y de las afectaciones patológicas de cualquier ser vivo. El lector encontrará órganos seleccionados en diferentes edades: desde el nacimiento (semana cero) hasta las 21 semanas de vida, a nivel microscópico, período a través del cual puede observarse con facilidad su desarrollo gradual.</p>
+			<p>De los animales vincu&shy;lados con el ser humano a lo largo de su curso evolutivo y del desa&shy;rrollo de sus civilizaciones, el cerdo (<i>Sus scrofa</i>) adquirió un papel preponderante descrito desde hace casi 45 mil años, en principio como preciada fuente de alimentación humana, producto de la caza (pintura rupestre “Cerdo verrucoso” en la isla de Célebes). Posteriormente, referido en culturas milenarias como la china (4 900 aC), y en 1 500 aC, al inicio su domesti&shy;cación en Europa. Su importancia emerge hasta nuestros días vinculada a la alimenta&shy;ción humana, a la investigación científica y a desarrollos médicos y farmacológicos.</p>
+			<p id="marcaPrologo">En la actualidad (2022) es la carne de cerdo la segunda más consumida en el mundo.  El cerdo es una de las especies animales que más se cría con la idea de ser un pro&shy;ducto para el consumo humano, un modelo de investigación y docencia y, por qué no, un animal de compañía. Los estudios de labo&shy;ratorio, en este caso de microscopía, una herramienta para fortalecer el estudio y el conocimiento básico de los tejidos y órganos, así como ser el centro del enten&shy;dimiento de los factores deno&shy;minados pato&shy;lógicos que modifican la estructura. Desde el siglo pasado los estudios microscó&shy;picos fueron la técnica que permitió el diagnóstico de diversas enfermedades. </p>
+			<p>Esta obra está dirigida a estudiantes, investiga&shy;dores y profesionistas del área de las ciencias médicas, biológicas y de la salud, donde los cerdos tienen un amplio campo de aplicación. Su objetivo fundamental es presentar las caracte&shy;rísticas histológicas de los principales órganos de impor&shy;tancia para el diagnóstico de enferme&shy;dades y para los estudios del uso de productos farmaco&shy;lógicos y hormonales, entre otros. El conocimiento de la histología es básico para el entendimiento de los procesos fisiológicos y de las afectaciones patológicas de cualquier ser vivo. El lector encontrará órganos selec&shy;cionados en diferentes edades: desde el nacimiento (semana cero) hasta las 21 semanas de vida, a nivel micros&shy;cópico, período a través del cual puede observarse con facilidad su desarrollo gradual.</p>
 			
 			<div  class="raya-separado" id="aIntro"></div>
 			

@@ -7,8 +7,6 @@ header {
 	background-image: url("../"), linear-gradient(slateblue, darkslateblue);
 	background-repeat: no-repeat;
 	background-position: right bottom;
-	border-bottom: 1px solid darkslategray;
-	
 	padding-top: 10px;
 	position: fixed;
 	display: block;
@@ -19,9 +17,7 @@ header {
 	/*height: 200px;*/
 	height: auto;
 	overflow: visible;
-	
 	box-sizing: border-box;
-	
 	-webkit-user-select: none; /* Safari */
   	-ms-user-select: none; /* IE 10 and IE 11 */
  	user-select: none; /* Standard syntax */

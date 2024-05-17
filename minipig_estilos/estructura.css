@@ -10,7 +10,7 @@
 
 overflow debe ser HIDDEN */
 body {
-	overflow: auto;  
+	overflow: auto;
 }
 /*AGREGADO ENERO 2024*/
 html {
@@ -39,8 +39,6 @@ div.contenedor {
 	margin-right: auto;
 	background-color: grey; /*mistyrose*/
 	width: 100%;
-	
-	border-top: 2px solid black;
 }
 div.contenedor_sinheader {
 	position: relative;

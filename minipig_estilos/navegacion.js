@@ -13,6 +13,11 @@ console.log("variable i es "+i);
 				document.getElementById("btnindice").style.backgroundColor="ghostwhite";
 				document.getElementById("rayas").style.display="none";
 				document.getElementById("laX").style.display="block";
+				/*CIERRA EL CONTROL DE LECTURA si está ABIERTO*/
+				document.getElementById("Control").style.height="0px";
+				document.getElementById("ojo").style.display="none";
+				console.log("cerraste control");
+				/*CONTROL LECTURA*/
 			}
 			else {
 				i=1;
@@ -21,6 +26,9 @@ console.log("variable i es "+i);
 				/*document.getElementById("nav-indice").style.height="500px";*/
 				document.getElementById("rayas").style.display="block";
 				document.getElementById("laX").style.display="none";
+				/*muestra el ojo*/
+				document.getElementById("ojo").style.display="block";
+				
 			}
 		} /*FIN  SHOW_INDICE*/
 
@@ -287,12 +295,7 @@ function irSistema11M() {
 	);
 	show_indice();
 }
-function irSistema12M() {
-	window.scroll(
-		{top: (document.getElementById("sistema12").offsetTop - compensacion), left: 0, }
-	);
-	show_indice();
-}
+
 
 
 
@@ -380,7 +383,7 @@ $(document).ready(function(){
 	});*/
 });
 
-window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_sistema12();};
+window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11();};
 	
 function escrol_prologo() {
 	var tituloI = document.getElementById("aPrologo");
@@ -536,21 +539,13 @@ function escrol_sistema10() {
 function escrol_sistema11() {
 			var titulo = document.getElementById("sistema11");
 			var progreso = titulo.offsetTop;
-			var otroTitulo = document.getElementById("sistema12");
+			var otroTitulo = document.getElementById("finSistemas");
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub11").classList.add("activoSub");
 			} else {document.getElementById("btnSub11").classList.remove("activoSub");}
 		}
-function escrol_sistema12() {
-			var titulo = document.getElementById("sistema12");
-			var progreso = titulo.offsetTop;
-			var otroTitulo = document.getElementById("finSistemas");
-			var Desprogreso = otroTitulo.offsetTop;
-			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
-				document.getElementById("btnSub12").classList.add("activoSub");
-			} else {document.getElementById("btnSub12").classList.remove("activoSub");}
-		}
+
 
 
 /*==============********************* CARGA DE I F R A M E S ************************=======*/

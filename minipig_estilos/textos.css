@@ -9,7 +9,7 @@ h1, h2  {
 	margin-bottom: 2em;
 	margin-top: 2em;
 
-	color: darkslategray;
+	/*color: darkslategray;*/
 	font-size: 1.4em;
 	display: block;
 }
@@ -19,7 +19,7 @@ h3, h4 {
 	font-style:normal;
 	text-align: center;
 	display: block;
-	color: darkslategray;
+	/*color: darkslategray;*/
 }
 
 h3 {
@@ -61,6 +61,7 @@ h4 {
 	overflow: visible;
 	top: 0px;
 	width: 100%;
+	color: darkslategray;
 /*	margin: auto;*/
 }
 
@@ -97,25 +98,26 @@ spam.versalita {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
-	word-wrap: normal;
+	word-wrap: break-word;
 	text-indent: auto; /*antes de octubre era 0 em*/
-	text-align: left;
+	text-align: justify;
 	line-height: 1.5;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	clear: left;
-	color: darkslategray;
 	margin-bottom: .5em;
 	
 	/*margin-left: 20%;
 	margin-right: 20%;*/
-	
 }
-
+/*para el control de lectura*/
+.textoColorClaro {color: gainsboro;}
+.textoColorMedio {color: #663333;}
+.textoColorDefaul {color: inherit;}
+/*para el control de lectura FFFIIINNN*/
 .textos ol {
 	position: relative;
 	display: block;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	color: darkslategray;
 	margin-bottom: 1.5em;
 	/*margin-left: 20%;
 	margin-right: 20%;*/
@@ -297,6 +299,13 @@ tr.filaColor > td:nth-child(even) {
 tr.filas:nth-child(even) {
 	background-color: lavenderblush;
 }
+tr.filas:nth-child(odd) {
+	background-color: ghostwhite;
+}
+
+.celdaTransparente {
+	background-color: transparent;
+}
 
 td.columnas:nth-child(even) {
 	background-color: lavenderblush;
@@ -322,7 +331,6 @@ th {
 td {
 	border: 1px solid darkgray;
 	padding: .3em;
-	color: darkslategray;
 }
 
 .tipo2 td {
