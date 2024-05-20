@@ -280,7 +280,6 @@ table caption {
 	margin-bottom: 1em;
 	margin-top: .5em;
 	text-align: left;
-	color: slategray;
 }
 
 tr.filaColor > td:first-child {
@@ -342,6 +341,9 @@ td {
 }
 table.tipoAncha {
 	overflow: auto;
+}
+.textos p a:hover {
+	cursor: pointer;
 }
 
 @media (min-width: 1200px) {

@@ -14,14 +14,17 @@ function achicar() {
 
 function colorOscuro() {
 	document.getElementById("Contenido").style.backgroundColor ="black";
+	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoblanco.png";
 	/*document.getElementById("Contenido").style.color="gainsboro";*/
 }
 function colorMedio() {
 	document.getElementById("Contenido").style.backgroundColor ="bisque";
+	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoazul.png";
 	/*document.getElementById("Contenido").style.color="#663333";*/
 }
 function colorClaro() {
 	document.getElementById("Contenido").style.backgroundColor ="ghostwhite";
+	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoazul.png";
 	/*document.getElementById("Contenido").style.color="dimgray";*/
 }
 
@@ -44,6 +47,9 @@ $(document).ready(function(){
 	$("ol").addClass("textoColorClaro");
 	$("ul").addClass("textoColorClaro");
 	  
+	$("caption").addClass("textoColorClaro");
+	$("caption").removeClass("textoColorMedio");
+	  
 	  
 	  /*aparte de los parrafos*/
   });
@@ -62,6 +68,9 @@ $(document).ready(function(){
 		
 	$("ol").removeClass("textoColorClaro");
 	$("ul").removeClass("textoColorClaro");
+		
+	$("caption").addClass("textoColorMedio");
+	$("caption").removeClass("textoColorClaro");
 	
 	
   });
@@ -80,6 +89,8 @@ $(document).ready(function(){
 		
 	$("ol").removeClass("textoColorClaro textoColorMedio");
 	$("ul").removeClass("textoColorClaro textoColorMedio");
+		
+	$("caption").removeClass("textoColorClaro");
 		
   });
 });
