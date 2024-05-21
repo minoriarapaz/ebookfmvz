@@ -39,12 +39,14 @@ $(document).ready(function(){
 	$("p").removeClass("textoColorMedio textoColorDefaul")
 	  
 	$("ol").removeClass("textoColorMedio");
-	 	  /*aparte de los parrafos*/
+	$("ul").removeClass("textoColorMedio");
+
 	$("h2").addClass("textoColorClaro");
 	$("h3").addClass("textoColorClaro");
 	$("h4").addClass("textoColorClaro");
 	 
 	$("ol").addClass("textoColorClaro");
+	
 	$("ul").addClass("textoColorClaro");
 	  
 	$("caption").addClass("textoColorClaro");
