@@ -72,7 +72,7 @@ div.contenedor_sinheader {
 .barra ul {
 	position: relative;
 	width: 99%;
-	list-style-type:none;
+	list-style-type: disc;
 	background-color: ghostwhite; /*rgba(255, 255, 255, .4);*/
 	color: darkslategray;
 	border-radius: 15px 0 0 15px;
@@ -83,11 +83,11 @@ div.contenedor_sinheader {
 	display: block;
 	/*border-radius: 10px 0 0 10px;*/
 	padding: 10px 0 10px 15px;
-	text-decoration: none;
+/*	text-decoration: none;*/
 	cursor: pointer;
 	
 }
-#boton5 {
+#boton6 {
 	border-bottom: none;
 }
 #boton1 {
@@ -104,8 +104,8 @@ div.contenedor_sinheader {
 	
 	color: lightcyan;
 	
-	list-style-type: none;
-	list-style-position: outside;
+	list-style-type: decimal; /*none*/
+	list-style-position: inside; /*en Outside no se ven los numerales*/
 	overflow: hidden;
 	
 	width: 90%;

@@ -89,16 +89,12 @@
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
+	text-align: center;
 }
 .modal-content-obj strong {
 	color: ghostwhite;
 }
-.indent10 {
-	text-indent: 10%;
-}
-.margenTopPlus {
-	margin-top: 2em;
-}
+
 
 .periquito {
 	display: block;
@@ -109,100 +105,26 @@
 	margin-left: 10%;
 	top: 80px;
 	background-repeat: no-repeat;
+	transition: scale .5s;
+	-webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.8s;
+  animation-name: zoom;
+  animation-duration: 0.8s;
 }
 
 .modal-content img {
 	display: block;
 	/*position: relative;*/
 }
-.radioModal {
-	width: auto;
-	margin: auto;
-	position: relative;
-}
-.superior {
-	z-index: 5;
-	top: 0;
-	position: absolute;
-	border: 2px solid red;
-	width: auto;
-}
-
 
 /* Caption of Modal Image */
-.notaalpie {
-	position: absolute;
-	bottom: 0px;
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  padding: 10px 0;
-  height: 50px;
-  background-color: cornflowerblue;
-}
 
-.caption {
-	margin: auto;
-  	display: block;
-  	width: 70%;
-  	max-width: 700px;
-  	padding: 5px 5px 5px 15px;
- 	height: auto;
-	overflow: auto;
- 	/*background-color: seagreen;*/
-	background-image: linear-gradient(rgba(46,139,87, .9), rgba(60,179,113, 1) );
-	box-sizing: border-box;
-	border-radius: 0px 0px 12px 12px;
-	position: relative;/* GREGADA POR TI*/
-}
-.invertido {
-	border-radius: 12px 12px 0 0;
-}
-.alturaMin {
-	min-height: 140px;
-}
 
-.captionsup /*NO LO HAS USADO*/ {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-  	display: block;
-  	width: 40%;
-	height: 100px;
-  	text-align: center;
-	padding: 5px 5px 5px 5px;
-  
-	overflow: auto;
-  	background-color: gold;
-	box-sizing: border-box;
-}
-.caption p {
-	font-family: Lucida Grande,"Trebuchet MS", Arial, serif;
-	font-size: .8em;
-	color: white;
-	hyphens: auto;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	word-wrap:normal;
-	text-align: left;
-	clear: left;
-	line-height: 1.5;
-	margin-bottom: .5em;
-}
-.caption p i {
-	color: rgba(255, 255, 255, .7);;
-}
-.pinfo {
-	font-size: .8em;
-	text-align: right;
-}
-.videoframe .pinfo {
-	color: gray;
-	font-size: .7em;
-	text-align: right;
-}
+
+
+
+
+
 
 
 /*Estilos para el MODAL que contiene la bibliografía--------- */
@@ -238,56 +160,10 @@
 }
 
 
-.misCanvas {
-	display: none;
-	opacity: 1;
-	position: relative;
-	margin: auto;
-	overflow: hidden;
-	width: 100%;
-	height: 650px;
-	clear: both;
-	border-radius: 20px;
-	transition: opacity 1s;
-}
-.oculto {
-	display: none;
-}
-
-.esquema /*(simulador de canvas) */{
-	display: block;
-	position: relative;
-	margin: auto;
-	overflow: auto;
-	width: 100%;
-	clear: both;
-	border-radius: 20px;
-}
-
-
-
-.canva_columba {
-	display: block;
-	position: relative;
-	clear: both;
-	padding-top: 10px;
-	overflow: auto;
-	border: 2px dotted red;
-}
 
 iframe {
 	border: none;
 	background-color: black;
-}
-
-
-.periquito {
-	transition: scale .5s;
-	
-	-webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.8s;
-  animation-name: zoom;
-  animation-duration: 0.8s;
 }
 
 
@@ -336,7 +212,7 @@ iframe {
   font-size: 1.1em; /*40px*/
   font-weight: bold;
 	padding: 8px 50px 8px 50px; /*  ÁREA DE CLICADO */
-	background-color: #FF6666; /*rgba(47, 79, 79, .5);*/
+	background-color: slateblue; /*rgba(47, 79, 79, .5);*/
 	border-radius: 10px;
 	text-align: center;
 	transition: 0.3s;
@@ -349,99 +225,6 @@ iframe {
   cursor: pointer;
 }
 
-.radiografia {
-	position: relative;
-  	border-radius: 5px;
-	display: block;
-	
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0;
-}
-.radio_mini {position: relative; width: 80%; display: block; margin: auto;}
-
-.ficha {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	/*background-image: linear-gradient(to right, darkslateblue , steelblue);*/
-	background-color: black;
-	border-radius: 10px;
-	margin-bottom: 2em;
-	
-	height: auto;
-}
-
-.flotaD {float: none;}
-
-.fichasub {
-	position: relative;
-	display: block;
-	overflow: visible;
-	/*background-color: rgba(0, 0, 0, .4);*/
-	background-image: linear-gradient(to right, darkslateblue , steelblue);
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	padding: 5px 10px 10px 10px;
-	color: white;
-	
-	text-indent: 0em;
-	text-align: center;
-	line-height: 1.2;
-	font-family: Lucida Grande,  "Roboto Slab",  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	clear: left;
-	margin-bottom: 0em;
-	font-size: .9em;
-}
-.fichasub small {opacity: .7;}
-
-.alignDerecha {text-align: right;}
-
-.fichaNumero {
-	display: block;
-	position: absolute;
-	left: 10px;
-	bottom: 0;
-	font-size: 3em;
-	opacity: .3;
-}
-
-.textos button {
-	display: block;
-	border-radius: 10px;
-	border: none;
-	width: auto;
-	background-image: linear-gradient(slateblue, darkslateblue);
-	color: ghostwhite;
-	font-size: .9em;
-	padding: 20px 20px 20px 20px;
-	margin: auto;
-	margin-bottom: 1em;
-}
-
-.ficha > p {
-	hyphens: auto;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	word-wrap: normal;
-	text-indent: 0em;
-	text-align: left;
-	line-height: 1;
-	font-family:  "Roboto Slab", Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	clear: left;
-	margin-bottom: 0.5em;
-	color: white;
-}
-
-.fichas_grupo {
-	border: 10px solid blue;
-	background-color: gold;
-	width: auto;
-	height: auto;
-	display: block;
-}
-
-.peque {font-size: 0.8em;}
 
 
 

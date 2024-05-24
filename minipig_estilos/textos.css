@@ -148,7 +148,7 @@ spam.versalita {
 
 
 .textos ul {
-	list-style-type: none;
+	/*list-style-type: none;*/
 	list-style-position: inside;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	margin-bottom: 1em;
@@ -346,6 +346,20 @@ table.tipoAncha {
 	cursor: pointer;
 }
 
+.textos button {
+	display: block;
+	border-radius: 10px;
+	border: none;
+	width: auto;
+	background-image: linear-gradient(slateblue, darkslateblue);
+	color: ghostwhite;
+	font-size: .9em;
+	padding: 20px 20px 20px 20px;
+	margin: auto;
+	margin-bottom: 1em;
+}
+
+
 @media (min-width: 1200px) {
 	.textos {
 		padding-left: 15%;
@@ -384,6 +398,7 @@ table.tipoAncha {
 		-webkit-hyphens: auto;
 		-ms-hyphens: auto;
 	}
+	
 	h3, h4 {
 		
 		padding-left: 20px;

@@ -1,29 +1,23 @@
 // JavaScript Document
 
 
-var i=1
+var i=1 /*esta VAR es usada en navegacion.JS*/
+var Scroll=1;
+console.log("la nueva var Scroll es " + Scroll);
 
 
-/*window.onload = function() {
+/*script que bloquea scroll al principio*/
+window.onload = function() {
 	noScroll();
-}*/
-
-/*
-var S=1;
-*/
+}
 function noScroll() {
 	document.body.style.overflow = "hidden";
-	console.log("scroll NO funciona [f. noScroll]");
-	/*if(S==1) {
-		document.body.style.overflow = "hidden"; S=2; console.log("S cambió a 2, scroll NO funciona");
-	} else {
-		document.body.style.overflow = "auto"; S=1; console.log("S es 1 y scroll funciona");
-	}*/
+	console.log("var Scroll es 1, scroll NO funciona");
 }
 
 function activarScroll() {
 	document.body.style.overflow = "auto";
-	console.log("scroll funcionando");
+	console.log("scroll funcionando. Var Scroll= "+Scroll);
 }
 
 function cerrarObj() {
