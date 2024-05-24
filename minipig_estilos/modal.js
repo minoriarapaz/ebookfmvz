@@ -7,9 +7,10 @@ console.log("la nueva var Scroll es " + Scroll);
 
 
 /*script que bloquea scroll al principio*/
-window.onload = function() {
+/*window.onload = function() {
 	noScroll();
-}
+}*/
+
 function noScroll() {
 	document.body.style.overflow = "hidden";
 	console.log("var Scroll es 1, scroll NO funciona");
@@ -21,7 +22,7 @@ function activarScroll() {
 }
 
 function cerrarObj() {
-            document.getElementById("modalObjetivo").style.display="none";
+           document.getElementById("modalObjetivo").style.display="none";
         }
 
 function modalObj() {
@@ -35,9 +36,11 @@ function modalObj() {
 
 
 var L=1
+
 function cerrarBiblio() {
 	document.getElementById("modalBiblio").style.display=null;
 }
+
 function verBiblio() {
 			if (L==1) {
 				document.getElementById("modalBiblio").style.display="block";
@@ -48,6 +51,28 @@ function verBiblio() {
 			} else {
 				setTimeout(cerrarBiblio, 400);
 				document.getElementById("modalBiblio").style.opacity="0";
+				cerrarIndice(); /*Cierra menu desplegable*/
+				document.body.style.overflow = "auto";
+				activarScroll();
+				L=1;
+			}
+}
+
+
+function cerrarLegal() {
+	document.getElementById("mLegal").style.display=null;
+}
+
+function verLegal() {
+			if (L==1) {
+				document.getElementById("mLegal").style.display="block";
+				document.getElementById("mLegal").style.opacity="1";
+				document.body.style.overflow = "hidden";
+				noScroll();
+				L=2;
+			} else {
+				setTimeout(cerrarBiblio, 400);
+				document.getElementById("mLegal").style.opacity="0";
 				cerrarIndice(); /*Cierra menu desplegable*/
 				document.body.style.overflow = "auto";
 				activarScroll();
