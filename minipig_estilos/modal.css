@@ -33,7 +33,7 @@
 	  height: 100%; /* Full height ANTES ERA 100%*/
 	  overflow:hidden; /* ANTES ERA SCROLL (mayo 2024)*/
 	
-  		background-color: rgba(0, 0, 0, .9); /* Black w/ opacity */
+  		background-color: rgba(0, 0, 0, .9); 
 		transition: opacity 1s;
 }
 
