@@ -305,19 +305,3 @@ video {
 		background-color: blue;
 	}
 }
-
-@media (max-width: 900px) {
-	video {
-		width: 90%;
-	}
-}
-@media (max-width: 800px) {
-	video {
-		width: 75%;
-	}
-}
-@media (max-width: 600px) {
-	video {
-		width: 100%;
-	}
-}

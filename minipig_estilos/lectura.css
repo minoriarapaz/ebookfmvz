@@ -11,7 +11,7 @@ div.btnOjo {
 	padding: 5px;
 	border-radius: 0 0 20px 20px;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 3;
 }
 .btnFondoGris {
 	background-color: rgba(0,0,0,0.0);
@@ -63,7 +63,12 @@ img.imgBtn {
 }
 #control_vacio {
 	width: 26%;
-	background-color: transparent;/*darkslateblue*/
+	background-color: rgba(64,64,64,0.5);/**/
+}
+@media (min-width: 800px) {
+	#control_vacio {
+		background-color: transparent;
+	}
 }
 #control_vacio2 {
 	width: 26%;
