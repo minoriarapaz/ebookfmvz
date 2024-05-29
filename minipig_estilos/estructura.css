@@ -10,7 +10,7 @@
 
 overflow debe ser HIDDEN */
 body {
-	overflow: auto;
+	overflow: hidden;
 }
 /*AGREGADO ENERO 2024*/
 html {

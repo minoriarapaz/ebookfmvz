@@ -50,7 +50,7 @@
 	overflow: auto;
 	position: relative;
 	
-	border: 2px dotted red;
+	background-color: ghostwhite;
 	box-shadow: 2px 2px 10px BLACK;
 	transition: scale 0.3s;
 	-webkit-animation-name: zoom;
@@ -61,8 +61,6 @@
 /* Modal Content (BIBLIOGRAFIA) */
 
 .modal-content-obj {
-	
-	border: 1px solid gold;
   margin: auto;
   display: block;
   width: 60%;
@@ -72,7 +70,7 @@
 	overflow: auto;
 	position: relative;
 	clear: both; /*antes left*/
-	font-size: 1.1em;
+	font-size: 1em;
 	word-wrap: normal;
 	text-indent: 0em;
 	line-height: 1.6;
@@ -142,7 +140,7 @@
   	width: 100%; /* Full width */
   	height: 100%; /* Full height ANTES ERA 100%*/
   	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
-  	background-color: rgba(0, 0, 0, .9);  /*Black w/ opacity */
+  	background-color: rgba(0, 0, 0, .5);  /*Black w/ opacity */
 	transition: opacity 0.3s;
 }
 
@@ -209,9 +207,9 @@ iframe {
 	margin-top: 2em;
 	margin-bottom: 5em;
   position: relative; /*absolute*/
-	width: 150px;
+	width: 100px;
   color: ghostwhite;
-  font-size: 1.1em; /*40px*/
+  font-size: 1em; /*40px*/
   font-weight: bold;
 	padding: 8px 50px 8px 50px; /*  ÁREA DE CLICADO */
 	background-image: linear-gradient(slateblue, darkslateblue);
