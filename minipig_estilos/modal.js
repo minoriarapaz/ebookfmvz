@@ -39,7 +39,6 @@ function verBiblio() {
 				document.getElementById("modalBiblio").style.display="block";
 				document.getElementById("modalBiblio").style.opacity="1";
 				document.body.style.overflow = "hidden";
-				noScroll();
 				L=2;
 			} else {
 				setTimeout(cerrarBiblio, 400);
