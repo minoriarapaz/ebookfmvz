@@ -9,6 +9,7 @@ console.log("la nueva var Scroll es " + Scroll);
 /*script que bloquea scroll al principio*/
 
 
+
 function activarScroll() {
 	document.body.style.overflow = "auto";
 	console.log("scroll funcionando. Var Scroll= "+Scroll);
@@ -22,7 +23,7 @@ function modalObj() {
 			document.getElementById("textoObjetivo").style.scale=".1";
 			document.getElementById("modalObjetivo").style.opacity="0";
 			setTimeout(cerrarObj, 400);
-			/*noScroll();*/
+			document.getElementById("ojo").style.display="block";
 			activarScroll();
 		}
 
@@ -33,6 +34,9 @@ var L=1
 function cerrarBiblio() {
 	document.getElementById("modalBiblio").style.display=null;
 }
+function cerrarLegales() {
+	document.getElementById("Legales").style.display=null;
+}
 
 function verBiblio() {
 			if (L==1) {
@@ -40,6 +44,7 @@ function verBiblio() {
 				document.getElementById("modalBiblio").style.opacity="1";
 				document.body.style.overflow = "hidden";
 				L=2;
+				console.log("biblio abierta");
 			} else {
 				setTimeout(cerrarBiblio, 400);
 				document.getElementById("modalBiblio").style.opacity="0";
@@ -47,7 +52,26 @@ function verBiblio() {
 				document.body.style.overflow = "auto";
 				activarScroll();
 				L=1;
+				console.log("biblio cerrada");
 			}
+}
+
+function verLegales() {
+	if (L==1) {
+		document.getElementById("Legales").style.display="block";
+		document.getElementById("Legales").style.opacity="1";
+		document.body.style.overflow = "hidden";
+		L=2;
+		console.log("legales abiertas");
+	} else {
+		setTimeout(cerrarLegales, 400);
+		document.getElementById("Legales").style.opacity="0";
+		document.body.style.overflow = "auto";
+		cerrarIndice();
+		activarScroll();
+		L=1;
+		console.log("legales cerradas");
+	}
 }
 
 

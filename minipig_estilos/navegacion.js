@@ -120,9 +120,9 @@ function irAnatomia() {
 	window.scroll(
 		{top: (document.getElementById("aAnatomia").offsetTop - compensacion), left: 0, }
 	);
-	document.getElementById("anatomia_temas").style.height = "370px";
+	document.getElementById("anatomia_temas").style.height = "340px";
 	
-/*	document.getElementById("anatomia_temas").style.height = "350px";*/
+/*	document.getElementById("anatomia_temas").style.height = "340px";*/
 	
 }
 
@@ -434,7 +434,7 @@ function escrol_anatomia() {
 				document.getElementById("boton2").classList.remove("activo");
 				document.getElementById("boton3").classList.remove("activo");
 				
-				document.getElementById("anatomia_temas").style.height = "370px";
+				document.getElementById("anatomia_temas").style.height = "340px";
 			} else {
 				document.getElementById("anatomia_temas").style.height = "0px";
 			}

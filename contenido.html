@@ -125,7 +125,7 @@
 					</ol>
 				</li>
 				<li id="boton5" onClick="verBiblio()">Bibliografía</li>
-				<li id="boton6">Legal</li>
+				<li id="boton6" onClick="verLegales()">Legal</li>
 			</ul>
 		</div><!--BARRA FIN-->
 		
@@ -136,7 +136,7 @@
 			
 			
 		<!--	MODAL DE INICIO (ADVERTENCIA)-->
-		<!--<div class="modalO" id="modalObjetivo">
+		<div class="modalO" id="modalObjetivo">
 			  	
 				<div class="modal-content-obj" id="textoObjetivo">
 				<p>El uso del material contenido en esta obra será exclusivamente para fines educativos e informativos, &shy;y deberá citar la fuente:</p>
@@ -145,27 +145,13 @@
 					
 					<a class="btnContinuar" onClick="modalObj()">Continuar</a>
 				</div>
-			</div>-->
+			</div>
 			<!--	MODAL DE INICIO (ADVERTENCIA)-->
 			
 			
-			
-			<!-- M O D A L  LEGALES -->
-			<!--<div id="mLegal" class="modal">
-			  	<span class="cruz" onClick="verBiblio()">&times;</span>
-				<div class="modal-content">
-					<div class="bibliotextos">
-						
-						<p>Primera edición (html), 30 de octubre de 2023 DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO  Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.
-							<br>ISBN: xxxxxxxxxx (iBook)<br>ISBN: xxxxxxxxx (HTML)
-						<br>Esta edición y sus características son propiedad de la UNAM.</p>
-					</div>
-				</div>
 
-			</div>-->
-			<!--MODAL L E G A L fin-->
 			
-			<!-- M O D A L  BIBLIOGRAFIA -->
+			<!-- M O D A L  BIBLIOGRAFIA y L E G A L -->
 			<div id="modalBiblio" class="modal">
 			  	<span class="cruz" id="tache" onClick="verBiblio()">&times;</span>
 				
@@ -187,8 +173,47 @@
 						
 					</div>
 				</div>
-
-			</div><!--MODAL fin-->
+			</div>
+			
+			<div class="modal" id="Legales">
+				<span class="cruz" id="tachelegal" onClick="verLegales()">&times;</span>
+				<div class="modal-content">
+					<section>
+						<div class="marquesina">
+							<img style="width:100px;" src="minipig_imagenes/interfaz/pig.png" alt="logopig" class="logosmall">
+						</div>
+						<div class="superior">
+							<div class="page">Créditos
+							<p>Primera edición (html), 30 de octubre de 2023</p>
+							<p>DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO</p>
+							<p>Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.</p>
+							<p>ISBN: 978-607-30-4099-0 (iBook)</p>
+							<p>ISBN: 978-607-30-8266-2 (HTML)</p>
+							<p>Esta edición y sus características son propiedad de la UNAM.</p></div>
+							
+							<div class="page">Agradecimientos</div>
+							<div class="page">Directorios</div>
+							<!--<p>Primera edición (html), 30 de octubre de 2023</p>
+							<p>DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO</p>
+							<p>Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.</p>
+							<p>ISBN: 978-607-30-4099-0 (iBook)</p>
+							<p>ISBN: 978-607-30-8266-2 (HTML)</p>
+							<p>Esta edición y sus características son propiedad de la UNAM.</p>-->
+						</div>
+						<div class="inferior">
+							<button class="boton_legal">Créditos</button>
+							<button class="boton_legal">Agradecimientos</button>
+							<button class="boton_legal">Directorio</button>
+						</div>
+					
+					
+					</section>
+				</div>
+			</div>
+			
+			
+			
+			<!--MODAL fin-->
 			
 			
 			

@@ -159,6 +159,57 @@
 	text-indent: -1em;
 }
 
+/*MODAL DE LAS LEGALES */
+
+.modal-content section {
+	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 500px;
+	margin: 50px 50px 50px 50px;
+	overflow: hidden;
+}
+
+.inferior, .marquesina {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	background-color: rgba(228,112,114,0.67);
+}
+.superior {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	border: 1px solid blue;
+	width: 400%;
+	background-color: coral;
+}
+.superior .page {
+	display: block;
+	width: 25%;
+	border: 1px solid gold;
+}
+.superior p {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+.inferior {
+	display: flex;
+	justify-content: center;
+}
+.marquesina > img {
+	margin: auto;
+}
+
+button.boton_legal {
+	display: inline-block;
+	padding: 10px;
+}
+
+/*MODAL DE LAS LEGALES fiiiiiiiinnnnnnn */
 
 
 iframe {

@@ -347,7 +347,7 @@ table.tipoAncha {
 	cursor: pointer;
 }
 
-.textos button {
+.textos > button {
 	display: block;
 	border-radius: 10px;
 	border: none;
